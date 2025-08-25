@@ -1,0 +1,18 @@
+networks:
+  sample-python-app:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 12.0.0.0/24
+          gateway: 12.0.0.254
+
+services:
+  app:
+    container_name: sample-python-app
+    restart: always
+    image: luizscofield/sample-python-app:9b6e288
+    ports:
+      - "81:5000"
+    networks:
+      sample-python-app:
+        ipv4_address: 12.0.0.1
