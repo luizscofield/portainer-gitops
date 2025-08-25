@@ -8,9 +8,9 @@ networks:
 
 services:
   app:
-    container_name: sample-python-app
+    container_name: service-001
     restart: always
-    image: luizscofield/sample-python-app:9b6e288
+    image: luizscofield/sample-python-app:b0ba8c9
     ports:
       - "80:5000"
     networks:
